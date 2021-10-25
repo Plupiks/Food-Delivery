@@ -235,12 +235,14 @@ ul {
   border-radius: 25px;
 }
 /* Card section */
-.promo {
+.promo-wrapper {
   padding-top: 50px;
   display: flex;
   justify-content: space-between;
+  margin: 0 -27px;
 }
 .card {
+  margin: 0 27px;
   flex: 50%;
   position: relative;
   border-radius: 20px;
@@ -313,7 +315,7 @@ ul {
 }
 /* Section Delivery Week */
 .delivery-week {
-  margin: 100px 0;
+  margin: 50px 0;
 }
 .section-title {
   font-weight: 500;
@@ -549,6 +551,7 @@ ul {
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+    margin: auto;
   }
   .search-form {
     margin-left: 40px;
@@ -582,6 +585,13 @@ ul {
   .container {
     max-width: 760px;
   }
+  .promo-wrapper {
+    flex-wrap: wrap;
+  }
+  .card {
+    flex: 50%;
+    max-width: calc(50% - 54px);
+  }
   .footer-nav {
     display: flex;
     flex-direction: column;
@@ -614,14 +624,10 @@ ul {
     margin-top: 15px;
     margin-bottom: 15px;
   }
-  .promo {
-    flex-wrap: wrap;
-  }
   .card {
-    flex: 150%;
-  }
-  .card:not(:last-child) {
     margin-bottom: 50px;
+    flex: 100%;
+    max-width: 100%;
   }
   .section-title {
     font-size: 30px;
